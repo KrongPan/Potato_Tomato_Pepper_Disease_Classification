@@ -1,0 +1,54 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+.MuiDropzoneArea-root {
+	background-color: transparent !important;
+}
+.MuiDropzoneArea-text, .MuiDropzoneArea-icon {
+  color: white !important;
+}
+
+.DropImage {
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	transform:translate(-50%,-50%);
+	position: fixed;  
+	top: 50%;  
+	left: 50%; 
+}
+.button {
+	background-color: rgb(210, 211, 210);
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 80%;
+	left: 3%;
+	cursor: pointer;
+}
+
+.choosePlant {
+	flex-direction: row;
+	display: flex;
+}
+
+.plant {
+	padding: 0.5rem;
+	background-color: rgb(92, 150, 92);
+	width: 30%;
+	border: 1px solid #c3c3c3;
+	
+}
+
