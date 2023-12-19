@@ -22,11 +22,12 @@ code {
 .DropImage {
 	padding: 0.5rem;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	transform:translate(-50%,-50%);
 	position: fixed;  
 	top: 50%;  
 	left: 50%; 
+
 }
 .button {
 	background-color: rgb(210, 211, 210);
@@ -49,6 +50,51 @@ code {
 	background-color: rgb(92, 150, 92);
 	width: 30%;
 	border: 1px solid #c3c3c3;
-	
+	border-radius: 15px 15px 0 0;	
+}
+
+.choose {
+	height: 50%;
+	width: 50%;
+	margin: auto;
+	flex-direction: row;
+	display: flex;
+	/* flex-wrap: wrap; */
+}
+
+.location {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background-color: rgb(88, 224, 142);
+	flex-direction: column;
+	display: flex;
+	flex-wrap: wrap;	
+}
+
+.mainlocation {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background-color: rgb(35, 31, 135);
+	flex-direction: column;
+	display: flex;
+	flex-wrap: wrap;	
+}
+
+.loca {
+	height: 100%;
+	width: 45%;
+	margin: auto;
+	background-color: rgb(222, 102, 102);
+	/* flex-direction: column; */
+	/* display: flex;
+	flex-wrap: wrap; */
+	padding: 2px;	
+	border-radius: 15px;
+}
+
+.locabox {
+	display: flex;
 }
 

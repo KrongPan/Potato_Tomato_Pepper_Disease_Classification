@@ -7,23 +7,41 @@ import { ImageUpload } from "./component/ImageUpload/Drop_images";
 import {
   APIProvider,
   Map,
+  AdvancedMarker,
+  Pin,
 } from "@vis.gl/react-google-maps";
 
 export function Intro() {
   const [showImageUpload, setShowImageUpload] = useState(false);
+  const [coordinates, setCoordinates] = useState({ lat: 15.87000, lng: 100.9925 });
 
   const handleClick = () => {
-    setShowImageUpload(true);
+    if  (showImageUpload) {
+      setShowImageUpload(false);
+    } 
+    else {
+      setShowImageUpload(true);
+    }
+    
+  };
+  
+  const handleMapClick = () => {
+      // const { lat, lng } = Map.event.lngLat;
+      // console.log(lat);
+      // setCoordinates({ lat, lng });
   };
 
-  const position = { lat: 15.87000, lng: 100.9925 };
+  
   return (
     <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <div style={{ height: "100vh", width: "100%" }}>
-        <Map zoom={9} center={position} mapId={process.env.REACT_APP_MAP_ID} minZoom={6}>
+        <Map zoom={6} center={coordinates} mapId={process.env.REACT_APP_MAP_ID} minZoom={6} onClick={handleMapClick}>
+          <AdvancedMarker position={coordinates}>
+              <Pin/>
+            </AdvancedMarker>
           {showImageUpload && (
             <div className={styles.DropImage}>
-              <ImageUpload />
+              <ImageUpload coordinates={coordinates}/>
             </div>
           )}
           <div className={styles.button} onClick={handleClick}>

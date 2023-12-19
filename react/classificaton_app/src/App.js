@@ -1,4 +1,3 @@
-import { ImageUpload } from "./component/ImageUpload/Drop_images";
 import { Intro } from "./map";
 
 function App() {
